@@ -15,7 +15,6 @@ find_package(catkin REQUIRED COMPONENTS
   nav_core
   pluginlib
   roscpp
-  rospy
   tf
 )
 
@@ -109,9 +108,9 @@ find_package(catkin REQUIRED COMPONENTS
 ## CATKIN_DEPENDS: catkin_packages dependent projects also need
 ## DEPENDS: system dependencies of this project that dependent projects also need
 catkin_package(
-#  INCLUDE_DIRS include
-#  LIBRARIES my_nav
-#  CATKIN_DEPENDS angles base_local_planner costmap_2d geometry_msgs nav_core pluginlib roscpp rospy
+ INCLUDE_DIRS include
+ LIBRARIES ${PROJECT_NAME}
+ CATKIN_DEPENDS angles base_local_planner costmap_2d geometry_msgs nav_core pluginlib roscpp
 #  DEPENDS system_lib
 )
 
