@@ -1,3 +1,6 @@
 build/*
 devel/*
 .vscode/*
+src/better_astar_global_planner
+src/pso_global_planner
+src/waypoint-global-planner
