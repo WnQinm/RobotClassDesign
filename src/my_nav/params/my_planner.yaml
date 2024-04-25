@@ -1,0 +1,2 @@
+GlobalPlanner:
+  planner_type: "astar"

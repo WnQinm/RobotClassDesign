@@ -4,13 +4,13 @@
 // register this planner as a BaseGlobalPlanner plugin
 PLUGINLIB_EXPORT_CLASS(global_planner::GlobalPlanner, nav_core::BaseGlobalPlanner)
 
-// Default Constructor
 namespace global_planner
 {
 
-    GlobalPlanner::GlobalPlanner() {}
+    GlobalPlanner::GlobalPlanner(): initialized_(false) {}
 
-    GlobalPlanner::GlobalPlanner(std::string name, costmap_2d::Costmap2DROS *costmap_ros){
+    GlobalPlanner::GlobalPlanner(std::string name, costmap_2d::Costmap2DROS *costmap_ros): initialized_(false)
+    {
         initialize(name, costmap_ros);
     }
 
@@ -18,16 +18,15 @@ namespace global_planner
         if (!initialized_)
         {
             // Initialize map
-            costmap_ros_ = costmap_ros;
             costmap_ = costmap_ros->getCostmap();
             frame_id_ = costmap_ros->getGlobalFrameID();
             // get costmap properties
             width = costmap_->getSizeInCellsX(), height = costmap_->getSizeInCellsY();
             origin_x_ = costmap_->getOriginX(), origin_y_ = costmap_->getOriginY();
             resolution_ = costmap_->getResolution();
-
+            // initialize other planner parameters
             ros::NodeHandle private_nh("~/" + name);
-            plan_pub_ = private_nh.advertise<nav_msgs::Path>("my_plan", 1);
+            // private_nh.param(param_name, param_val, default_val);
 
             ROS_INFO("custom global planner initialized successfully");
             initialized_ = true;
@@ -41,20 +40,18 @@ namespace global_planner
 
     /**
      * @brief global planner 必需的接口，路径规划主体
-     * @param start 起点 世界坐标
-     * @param goal 终点 世界坐标
-     * @param plan 输出的路径点 世界坐标
+     * @details
+     * 世界坐标转地图坐标 costmap_->worldToMap
+     * 地图坐标转栅格索引 costmap_->getIndex
+     * 栅格索引转地图坐标 costmap_->indexToCells
+     * 地图坐标转世界坐标 costmap_->mapToWorld
+     * 
+     * 世界坐标为连续浮点数
+     * 地图坐标指在栅格地图中的坐标，为离散整数
     **/
     bool GlobalPlanner::makePlan(const geometry_msgs::PoseStamped &start, 
                                  const geometry_msgs::PoseStamped &goal, 
                                  std::vector<geometry_msgs::PoseStamped> &plan){
-        /*
-        tips: 世界坐标转地图坐标 costmap_->worldToMap
-              地图坐标转栅格索引 costmap_->getIndex
-              栅格索引转地图坐标 costmap_->indexToCells
-              地图坐标转世界坐标 costmap_->mapToWorld
-        */
-        
         if (!initialized_)
         {
             ROS_ERROR("please call initialize() before use");
@@ -62,19 +59,30 @@ namespace global_planner
         }
 
         std::pair<int, int> start_node, goal_node;
+        std::vector<std::pair<int, int>> path;
+        // int start_cell = this->costmap_->getIndex(start_node.first, start_node.second);
+        // int goal_cell = this->costmap_->getIndex(goal_node.first, goal_node.second);
+
         if (!process_coordinate(start, goal, start_node, goal_node))
             return false;
-
-        int start_cell = this->costmap_->getIndex(start_node.first, start_node.second);
-        int goal_cell = this->costmap_->getIndex(goal_node.first, goal_node.second);
-
-        std::vector<std::pair<int, int>> path;
+        
         plan.clear();
 
-        // TODO: get path from my_planners
-
-        // TODO: convert path to plan
-
+        if (_planner.plan(costmap_, start_node, goal_node, path))
+        {
+            for (int i = 0; i < path.size(); i++)
+            {
+                geometry_msgs::PoseStamped pose = this->create_pose(path[i], goal.header.frame_id, goal.header.stamp);
+                plan.push_back(pose);
+            }
+            return true;
+        }
+        else
+        {
+            geometry_msgs::PoseStamped pose = this->create_pose(path[0], frame_id_, ros::Time::now());
+            plan.push_back(pose);
+            return false;
+        }
     }
 
     // 检查输入坐标位置在地图中是否为障碍物
@@ -121,5 +129,25 @@ namespace global_planner
         }
 
         return true;
+    }
+
+    geometry_msgs::PoseStamped GlobalPlanner::create_pose(std::pair<int, int> map_coordinate, std::string frame_id, ros::Time stamp)
+    {
+        double wx = 0.0;
+        double wy = 0.0;
+        this->costmap_->mapToWorld(map_coordinate.first, map_coordinate.second, wx, wy);
+        geometry_msgs::PoseStamped pose;
+
+        pose.header.frame_id = frame_id;
+        pose.header.stamp = stamp;
+
+        pose.pose.position.x = wx;
+        pose.pose.position.y = wy;
+        pose.pose.position.z = 0.0;
+
+        pose.pose.orientation.x = 0.0;
+        pose.pose.orientation.y = 0.0;
+        pose.pose.orientation.z = 0.0;
+        pose.pose.orientation.w = 1.0;
     }
 };

@@ -1,5 +1,3 @@
-/** include the libraries you need in your planner here */
-/** for global path planner interface */
 #include <ros/ros.h>
 #include <costmap_2d/costmap_2d_ros.h>
 #include <costmap_2d/costmap_2d.h>
@@ -10,8 +8,7 @@
 #include <base_local_planner/world_model.h>
 #include <base_local_planner/costmap_model.h>
 #include <tf/tf.h>
-
-using std::string;
+#include "astar_planner.h"
 
 #ifndef GLOBAL_PLANNER_CPP
 #define GLOBAL_PLANNER_CPP
@@ -45,13 +42,16 @@ namespace global_planner
 
     private:
         costmap_2d::Costmap2D* costmap_;
-        costmap_2d::Costmap2DROS* costmap_ros_;
         unsigned int width, height;                      // costmap size
         double origin_x_, origin_y_;                     // costmap origin
         double resolution_;                              // costmap resolution
         ros::Publisher plan_pub_;
         std::string frame_id_;
         bool initialized_;
+
+        astar_planner::AStarPlanner _planner;
+
+        geometry_msgs::PoseStamped create_pose(std::pair<int, int> map_coordinate, std::string frame_id, ros::Time stamp);
     };
 };
 #endif
