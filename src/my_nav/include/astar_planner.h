@@ -17,6 +17,9 @@ namespace astar_planner
 {
     const int D = 1;
     const double D2 = std::sqrt(2) * D;
+    std::pair<int, int> _start;
+    std::pair<int, int> _goal;
+
     const std::array<std::pair<int, int>, 8> dir
     {
         std::make_pair(-D,  D), std::make_pair(0,  D), std::make_pair(D,  D),
@@ -31,7 +34,7 @@ namespace astar_planner
         ~Node();
         Node operator+ (const std::pair<int, int> p);
 
-        std::pair<int, int> position, start;
+        std::pair<int, int> position;
         double g, h;
         double priority;
         Node* parent;
@@ -61,8 +64,6 @@ namespace astar_planner
                   const std::pair<int, int> _goal,
                   std::vector<std::pair<int, int>>& path);
     private:
-        std::pair<int, int> _start;
-        std::pair<int, int> _goal;
         std::vector<std::pair<int, int>> final_path;
         void getPath();
         bool AStarPlanner::collision(costmap_2d::Costmap2D* costmap, int mx, int my);

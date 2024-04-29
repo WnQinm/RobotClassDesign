@@ -3,29 +3,28 @@
 namespace astar_planner
 {
     Node::Node() {}
-    Node::Node(std::pair<int, int> position): 
-            position(position), start(position), h(0.0), g(0.0), priority(0.0), parent(nullptr) {}
+    Node::Node(std::pair<int, int> position):
+            position(position), h(0.0), g(0.0), priority(0.0), parent(nullptr) {}
     Node::~Node() {}
     Node Node::operator+ (const std::pair<int, int> p)
     {
         Node n;
         n.position.first = this->position.first + p.first;
         n.position.second = this->position.second + p.second;
-        n.start = this->start;
         if (p.first == 0 || p.second == 0)
             n.g = this->g + D;
         else
             n.g = this->g + D2;
-        double h_diagonal = std::min(std::abs(n.position.first - n.start.first), 
-                                     std::abs(n.position.second - n.start.second));
-        double h_straight = std::abs(n.position.first - n.start.first) + 
-                            std::abs(n.position.second - n.start.second);
+        double h_diagonal = std::min(std::abs(n.position.first - _start.first),
+                                     std::abs(n.position.second - _start.second));
+        double h_straight = std::abs(n.position.first - _start.first) +
+                            std::abs(n.position.second - _start.second);
         n.h = D2 * h_diagonal + D * (h_straight - 2 * h_diagonal);
         n.priority = n.g + n.h;
         n.parent = this;
         return n;
     }
-    
+
 
     NodeSet::NodeSet() {}
     NodeSet::~NodeSet() {}
@@ -78,8 +77,8 @@ namespace astar_planner
     AStarPlanner::AStarPlanner() {}
     AStarPlanner::~AStarPlanner() {}
     bool AStarPlanner::plan(costmap_2d::Costmap2D* costmap,
-                            const std::pair<int, int> start, 
-                            const std::pair<int, int> goal, 
+                            const std::pair<int, int> start,
+                            const std::pair<int, int> goal,
                             std::vector<std::pair<int, int>>& path)
     {
         ROS_INFO(" A Star: planning started... ");
@@ -149,7 +148,7 @@ namespace astar_planner
         Node top_node;
 
         open_set.insert(Node(_start));
-        if (open_set.size() > 0)
+        while (open_set.size() > 0)
         {
             top_node = open_set.pop();
             if (top_node.position == _goal)
