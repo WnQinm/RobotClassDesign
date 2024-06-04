@@ -9,9 +9,10 @@
 #include <base_local_planner/costmap_model.h>
 #include <tf/tf.h>
 #include "astar_planner.h"
+// #include"pso.h"
 
-#ifndef GLOBAL_PLANNER_CPP
-#define GLOBAL_PLANNER_CPP
+#ifndef GLOBAL_PLANNER_H
+#define GLOBAL_PLANNER_H
 
 namespace global_planner
 {
@@ -50,7 +51,7 @@ namespace global_planner
         bool initialized_;
 
         astar_planner::AStarPlanner _planner;
-
+        // pso_planner::PSOplanner _planner;
         geometry_msgs::PoseStamped create_pose(std::pair<int, int> map_coordinate, std::string frame_id, ros::Time stamp);
     };
 };

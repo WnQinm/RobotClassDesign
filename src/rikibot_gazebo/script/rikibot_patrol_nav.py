@@ -23,9 +23,9 @@ class PatrolNav():
  
         #set all navigation target pose
         self.locations = dict()
-        self.locations['one']   = Pose(Point(5.654, 1.178, 0.000), Quaternion(0.000, 0.000, 0.588, 0.809))
-        self.locations['two']   = Pose(Point(-4.007, -2.667, 0.000), Quaternion(0.000, 0.000, 1.000, 0.003))
-        self.locations['three'] = Pose(Point(-4.968, 1.329, 0.000), Quaternion(0.000, 0.000, 0.613, 0.790))
+        self.locations['one']   = Pose(Position(-0.936, 4.910, 0.000), Orientation(0.000, 0.000, -0.929, 0.369))
+        self.locations['two']   = Pose(Position(3.630, 3.110, 0.000), Orientation(0.000, 0.000, -0.992, 0.124))
+        self.locations['three'] = Pose( Position(3.630, 3.110, 0.000), Orientation(0.000, 0.000, -0.992, 0.124))
  
         # Goal state return values
         goal_states = ['PENDING', 'ACTIVE', 'PREEMPTED', 'SUCCEEDED', 'ABORTED',

@@ -1,11 +1,9 @@
 <launch>
   <!--这里可以指定机器人的初始位置-->
-  <arg name="x_pos" default="1"/>
-  <arg name="y_pos" default="2"/>
+  <arg name="x_pos" default="0.0"/>
+  <arg name="y_pos" default="0.0"/>
   <arg name="z_pos" default="0.0"/>
-  <param name="/use_sim_time" value="true" /> 
-
-  <!-- <node pkg="tf" type="static_transform_publisher" name="odom_to_base_footprint" args="0.0 0.0 0.0 0 0 0.0 /odom /base_footprint 10000"/> -->
+  <param name="/use_sim_time" value="true" />
 
   <!-- 启动 gazebo -->
   <include file="$(find rikibot_gazebo)/launch/gazebo_world.launch"/>

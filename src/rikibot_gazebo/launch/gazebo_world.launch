@@ -1,7 +1,7 @@
 <launch>
   <include file="$(find gazebo_ros)/launch/empty_world.launch">
     <!-- 加载名称为room.world -->
-    <arg name="world_name" value="$(find rikibot_gazebo)/world/room.world"/>
+    <arg name="world_name" value="$(find rikibot_gazebo)/world/rede.world"/>
     <arg name="paused" value="false"/>
     <arg name="use_sim_time" value="true"/>
     <arg name="gui" value="true"/>
@@ -9,5 +9,3 @@
     <arg name="debug" value="false"/>
   </include>
 </launch>
-
-

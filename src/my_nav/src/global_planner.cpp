@@ -1,6 +1,7 @@
 #include <pluginlib/class_list_macros.h>
 #include "global_planner.h"
-
+#include<bits/stdc++.h>
+using namespace std;
 // register this planner as a BaseGlobalPlanner plugin
 PLUGINLIB_EXPORT_CLASS(global_planner::GlobalPlanner, nav_core::BaseGlobalPlanner)
 
@@ -45,12 +46,12 @@ namespace global_planner
      * 地图坐标转栅格索引 costmap_->getIndex
      * 栅格索引转地图坐标 costmap_->indexToCells
      * 地图坐标转世界坐标 costmap_->mapToWorld
-     * 
+     *
      * 世界坐标为连续浮点数
      * 地图坐标指在栅格地图中的坐标，为离散整数
     **/
-    bool GlobalPlanner::makePlan(const geometry_msgs::PoseStamped &start, 
-                                 const geometry_msgs::PoseStamped &goal, 
+    bool GlobalPlanner::makePlan(const geometry_msgs::PoseStamped &start,
+                                 const geometry_msgs::PoseStamped &goal,
                                  std::vector<geometry_msgs::PoseStamped> &plan){
         if (!initialized_)
         {
@@ -65,11 +66,12 @@ namespace global_planner
 
         if (!process_coordinate(start, goal, start_node, goal_node))
             return false;
-        
+
         plan.clear();
 
         if (_planner.plan(costmap_, start_node, goal_node, path))
         {
+            // cout<<"xy"<<endl;
             for (int i = 0; i < path.size(); i++)
             {
                 geometry_msgs::PoseStamped pose = this->create_pose(path[i], goal.header.frame_id, goal.header.stamp);
@@ -103,7 +105,7 @@ namespace global_planner
                                            std::pair<int, int> &start_node, std::pair<int, int> &goal_node)
     {
         unsigned int mx = 0, my = 0;
-        
+
         if(this->collision(start.pose.position.x, start.pose.position.y))
         {
             ROS_WARN("failed to get a path.start point is obstacle.");
@@ -149,5 +151,7 @@ namespace global_planner
         pose.pose.orientation.y = 0.0;
         pose.pose.orientation.z = 0.0;
         pose.pose.orientation.w = 1.0;
+
+        return pose;
     }
 };

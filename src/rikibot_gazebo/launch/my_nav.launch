@@ -1,0 +1,5 @@
+<launch>
+    <include file="$(find rikibot_gazebo)/launch/bringup.launch"/>
+    <include file="$(find rikibot_gazebo)/launch/lidar_slam.launch"/>
+    <include file="$(find rikibot_gazebo)/launch/navgation.launch"/>
+</launch>
