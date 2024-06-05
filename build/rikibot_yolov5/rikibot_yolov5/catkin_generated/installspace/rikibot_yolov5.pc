@@ -1,0 +1,8 @@
+prefix=/home/rikibot/robotCourseDesign2024/install
+
+Name: rikibot_yolov5
+Description: Description of rikibot_yolov5
+Version: 1.0.1
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

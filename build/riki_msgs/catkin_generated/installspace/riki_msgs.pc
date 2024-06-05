@@ -1,0 +1,8 @@
+prefix=/home/rikibot/robotCourseDesign2024/install
+
+Name: riki_msgs
+Description: Description of riki_msgs
+Version: 0.0.1
+Cflags: -I${prefix}/include
+Libs: -L${prefix}/lib 
+Requires: message_runtime std_msgs geometry_msgs

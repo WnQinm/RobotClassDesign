@@ -1,0 +1,8 @@
+prefix=/home/rikibot/robotCourseDesign2024/install
+
+Name: rikibot
+Description: Description of rikibot
+Version: 1.0.0
+Cflags: -I${prefix}/include
+Libs: -L${prefix}/lib -lrikibot
+Requires: roscpp rospy tf nav_msgs riki_msgs geometry_msgs sensor_msgs std_msgs
