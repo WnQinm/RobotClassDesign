@@ -1,0 +1,8 @@
+prefix=/home/rikibot/robotCourseDesign2024/devel
+
+Name: rikibot_follower
+Description: Description of rikibot_follower
+Version: 2.3.7
+Cflags: 
+Libs: -L${prefix}/lib -lrikibot_follower
+Requires: roscpp depth_image_proc cv_bridge image_transport

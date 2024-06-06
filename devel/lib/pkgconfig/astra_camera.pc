@@ -1,0 +1,8 @@
+prefix=/home/rikibot/robotCourseDesign2024/devel
+
+Name: astra_camera
+Description: Description of astra_camera
+Version: 0.3.0
+Cflags: -I/home/rikibot/robotCourseDesign2024/devel/include -I/home/rikibot/robotCourseDesign2024/src/depth_camera/ros_astra_camera/include
+Libs: -L${prefix}/lib -lastra_wrapper
+Requires: camera_info_manager dynamic_reconfigure image_transport nodelet sensor_msgs roscpp message_runtime

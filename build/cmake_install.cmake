@@ -136,8 +136,11 @@ endif()
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
   include("/home/rikibot/robotCourseDesign2024/build/gtest/cmake_install.cmake")
+  include("/home/rikibot/robotCourseDesign2024/build/depth_camera/ros_astra_launch/cmake_install.cmake")
   include("/home/rikibot/robotCourseDesign2024/build/riki_msgs/cmake_install.cmake")
   include("/home/rikibot/robotCourseDesign2024/build/rikibot_yolov8/rikibot_yolov8/cmake_install.cmake")
+  include("/home/rikibot/robotCourseDesign2024/build/depth_camera/ros_astra_camera/cmake_install.cmake")
+  include("/home/rikibot/robotCourseDesign2024/build/rikibot_follower/cmake_install.cmake")
   include("/home/rikibot/robotCourseDesign2024/build/rikibot/cmake_install.cmake")
   include("/home/rikibot/robotCourseDesign2024/build/rikibot_yolov8/yolov8_ros_msgs/cmake_install.cmake")
 
