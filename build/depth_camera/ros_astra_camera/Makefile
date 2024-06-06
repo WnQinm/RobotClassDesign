@@ -382,90 +382,6 @@ rosgraph_msgs_generate_messages_py/fast:
 .PHONY : rosgraph_msgs_generate_messages_py/fast
 
 # Convenience name for target.
-depth_camera/ros_astra_camera/CMakeFiles/dynamic_reconfigure_generate_messages_cpp.dir/rule:
-	cd /home/rikibot/robotCourseDesign2024/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 depth_camera/ros_astra_camera/CMakeFiles/dynamic_reconfigure_generate_messages_cpp.dir/rule
-.PHONY : depth_camera/ros_astra_camera/CMakeFiles/dynamic_reconfigure_generate_messages_cpp.dir/rule
-
-# Convenience name for target.
-dynamic_reconfigure_generate_messages_cpp: depth_camera/ros_astra_camera/CMakeFiles/dynamic_reconfigure_generate_messages_cpp.dir/rule
-.PHONY : dynamic_reconfigure_generate_messages_cpp
-
-# fast build rule for target.
-dynamic_reconfigure_generate_messages_cpp/fast:
-	cd /home/rikibot/robotCourseDesign2024/build && $(MAKE) $(MAKESILENT) -f depth_camera/ros_astra_camera/CMakeFiles/dynamic_reconfigure_generate_messages_cpp.dir/build.make depth_camera/ros_astra_camera/CMakeFiles/dynamic_reconfigure_generate_messages_cpp.dir/build
-.PHONY : dynamic_reconfigure_generate_messages_cpp/fast
-
-# Convenience name for target.
-depth_camera/ros_astra_camera/CMakeFiles/dynamic_reconfigure_generate_messages_eus.dir/rule:
-	cd /home/rikibot/robotCourseDesign2024/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 depth_camera/ros_astra_camera/CMakeFiles/dynamic_reconfigure_generate_messages_eus.dir/rule
-.PHONY : depth_camera/ros_astra_camera/CMakeFiles/dynamic_reconfigure_generate_messages_eus.dir/rule
-
-# Convenience name for target.
-dynamic_reconfigure_generate_messages_eus: depth_camera/ros_astra_camera/CMakeFiles/dynamic_reconfigure_generate_messages_eus.dir/rule
-.PHONY : dynamic_reconfigure_generate_messages_eus
-
-# fast build rule for target.
-dynamic_reconfigure_generate_messages_eus/fast:
-	cd /home/rikibot/robotCourseDesign2024/build && $(MAKE) $(MAKESILENT) -f depth_camera/ros_astra_camera/CMakeFiles/dynamic_reconfigure_generate_messages_eus.dir/build.make depth_camera/ros_astra_camera/CMakeFiles/dynamic_reconfigure_generate_messages_eus.dir/build
-.PHONY : dynamic_reconfigure_generate_messages_eus/fast
-
-# Convenience name for target.
-depth_camera/ros_astra_camera/CMakeFiles/dynamic_reconfigure_generate_messages_lisp.dir/rule:
-	cd /home/rikibot/robotCourseDesign2024/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 depth_camera/ros_astra_camera/CMakeFiles/dynamic_reconfigure_generate_messages_lisp.dir/rule
-.PHONY : depth_camera/ros_astra_camera/CMakeFiles/dynamic_reconfigure_generate_messages_lisp.dir/rule
-
-# Convenience name for target.
-dynamic_reconfigure_generate_messages_lisp: depth_camera/ros_astra_camera/CMakeFiles/dynamic_reconfigure_generate_messages_lisp.dir/rule
-.PHONY : dynamic_reconfigure_generate_messages_lisp
-
-# fast build rule for target.
-dynamic_reconfigure_generate_messages_lisp/fast:
-	cd /home/rikibot/robotCourseDesign2024/build && $(MAKE) $(MAKESILENT) -f depth_camera/ros_astra_camera/CMakeFiles/dynamic_reconfigure_generate_messages_lisp.dir/build.make depth_camera/ros_astra_camera/CMakeFiles/dynamic_reconfigure_generate_messages_lisp.dir/build
-.PHONY : dynamic_reconfigure_generate_messages_lisp/fast
-
-# Convenience name for target.
-depth_camera/ros_astra_camera/CMakeFiles/dynamic_reconfigure_generate_messages_nodejs.dir/rule:
-	cd /home/rikibot/robotCourseDesign2024/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 depth_camera/ros_astra_camera/CMakeFiles/dynamic_reconfigure_generate_messages_nodejs.dir/rule
-.PHONY : depth_camera/ros_astra_camera/CMakeFiles/dynamic_reconfigure_generate_messages_nodejs.dir/rule
-
-# Convenience name for target.
-dynamic_reconfigure_generate_messages_nodejs: depth_camera/ros_astra_camera/CMakeFiles/dynamic_reconfigure_generate_messages_nodejs.dir/rule
-.PHONY : dynamic_reconfigure_generate_messages_nodejs
-
-# fast build rule for target.
-dynamic_reconfigure_generate_messages_nodejs/fast:
-	cd /home/rikibot/robotCourseDesign2024/build && $(MAKE) $(MAKESILENT) -f depth_camera/ros_astra_camera/CMakeFiles/dynamic_reconfigure_generate_messages_nodejs.dir/build.make depth_camera/ros_astra_camera/CMakeFiles/dynamic_reconfigure_generate_messages_nodejs.dir/build
-.PHONY : dynamic_reconfigure_generate_messages_nodejs/fast
-
-# Convenience name for target.
-depth_camera/ros_astra_camera/CMakeFiles/dynamic_reconfigure_generate_messages_py.dir/rule:
-	cd /home/rikibot/robotCourseDesign2024/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 depth_camera/ros_astra_camera/CMakeFiles/dynamic_reconfigure_generate_messages_py.dir/rule
-.PHONY : depth_camera/ros_astra_camera/CMakeFiles/dynamic_reconfigure_generate_messages_py.dir/rule
-
-# Convenience name for target.
-dynamic_reconfigure_generate_messages_py: depth_camera/ros_astra_camera/CMakeFiles/dynamic_reconfigure_generate_messages_py.dir/rule
-.PHONY : dynamic_reconfigure_generate_messages_py
-
-# fast build rule for target.
-dynamic_reconfigure_generate_messages_py/fast:
-	cd /home/rikibot/robotCourseDesign2024/build && $(MAKE) $(MAKESILENT) -f depth_camera/ros_astra_camera/CMakeFiles/dynamic_reconfigure_generate_messages_py.dir/build.make depth_camera/ros_astra_camera/CMakeFiles/dynamic_reconfigure_generate_messages_py.dir/build
-.PHONY : dynamic_reconfigure_generate_messages_py/fast
-
-# Convenience name for target.
-depth_camera/ros_astra_camera/CMakeFiles/dynamic_reconfigure_gencfg.dir/rule:
-	cd /home/rikibot/robotCourseDesign2024/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 depth_camera/ros_astra_camera/CMakeFiles/dynamic_reconfigure_gencfg.dir/rule
-.PHONY : depth_camera/ros_astra_camera/CMakeFiles/dynamic_reconfigure_gencfg.dir/rule
-
-# Convenience name for target.
-dynamic_reconfigure_gencfg: depth_camera/ros_astra_camera/CMakeFiles/dynamic_reconfigure_gencfg.dir/rule
-.PHONY : dynamic_reconfigure_gencfg
-
-# fast build rule for target.
-dynamic_reconfigure_gencfg/fast:
-	cd /home/rikibot/robotCourseDesign2024/build && $(MAKE) $(MAKESILENT) -f depth_camera/ros_astra_camera/CMakeFiles/dynamic_reconfigure_gencfg.dir/build.make depth_camera/ros_astra_camera/CMakeFiles/dynamic_reconfigure_gencfg.dir/build
-.PHONY : dynamic_reconfigure_gencfg/fast
-
-# Convenience name for target.
 depth_camera/ros_astra_camera/CMakeFiles/nodelet_generate_messages_cpp.dir/rule:
 	cd /home/rikibot/robotCourseDesign2024/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 depth_camera/ros_astra_camera/CMakeFiles/nodelet_generate_messages_cpp.dir/rule
 .PHONY : depth_camera/ros_astra_camera/CMakeFiles/nodelet_generate_messages_cpp.dir/rule
@@ -1658,12 +1574,6 @@ help:
 	@echo "... bond_generate_messages_lisp"
 	@echo "... bond_generate_messages_nodejs"
 	@echo "... bond_generate_messages_py"
-	@echo "... dynamic_reconfigure_gencfg"
-	@echo "... dynamic_reconfigure_generate_messages_cpp"
-	@echo "... dynamic_reconfigure_generate_messages_eus"
-	@echo "... dynamic_reconfigure_generate_messages_lisp"
-	@echo "... dynamic_reconfigure_generate_messages_nodejs"
-	@echo "... dynamic_reconfigure_generate_messages_py"
 	@echo "... nodelet_generate_messages_cpp"
 	@echo "... nodelet_generate_messages_eus"
 	@echo "... nodelet_generate_messages_lisp"

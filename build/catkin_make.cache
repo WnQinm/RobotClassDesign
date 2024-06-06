@@ -1,2 +1,2 @@
-depth_camera/ros_astra_camera:depth_camera/ros_astra_launch:riki_msgs:rikibot:rikibot_follower:rikibot_yolov8/rikibot_yolov8:rikibot_yolov8/yolov8_ros_msgs
+depth_camera/ros_astra_camera:depth_camera/ros_astra_launch:riki_msgs:rikibot:rikibot_follower:rikibot_object_detect:rikibot_yolov8/rikibot_yolov8:rikibot_yolov8/yolov8_ros_msgs
 -DCATKIN_DEVEL_PREFIX=/home/rikibot/robotCourseDesign2024/devel -DCMAKE_INSTALL_PREFIX=/home/rikibot/robotCourseDesign2024/install -G Unix Makefiles

@@ -67,6 +67,7 @@ all: gtest/all
 all: depth_camera/ros_astra_launch/all
 all: riki_msgs/all
 all: rikibot_yolov8/rikibot_yolov8/all
+all: rikibot_object_detect/all
 all: depth_camera/ros_astra_camera/all
 all: rikibot_follower/all
 all: rikibot/all
@@ -78,6 +79,7 @@ preinstall: gtest/preinstall
 preinstall: depth_camera/ros_astra_launch/preinstall
 preinstall: riki_msgs/preinstall
 preinstall: rikibot_yolov8/rikibot_yolov8/preinstall
+preinstall: rikibot_object_detect/preinstall
 preinstall: depth_camera/ros_astra_camera/preinstall
 preinstall: rikibot_follower/preinstall
 preinstall: rikibot/preinstall
@@ -94,6 +96,7 @@ clean: gtest/clean
 clean: depth_camera/ros_astra_launch/clean
 clean: riki_msgs/clean
 clean: rikibot_yolov8/rikibot_yolov8/clean
+clean: rikibot_object_detect/clean
 clean: depth_camera/ros_astra_camera/clean
 clean: rikibot_follower/clean
 clean: rikibot/clean
@@ -137,12 +140,6 @@ depth_camera/ros_astra_camera/clean: depth_camera/ros_astra_camera/CMakeFiles/ro
 depth_camera/ros_astra_camera/clean: depth_camera/ros_astra_camera/CMakeFiles/rosgraph_msgs_generate_messages_lisp.dir/clean
 depth_camera/ros_astra_camera/clean: depth_camera/ros_astra_camera/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/clean
 depth_camera/ros_astra_camera/clean: depth_camera/ros_astra_camera/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/clean
-depth_camera/ros_astra_camera/clean: depth_camera/ros_astra_camera/CMakeFiles/dynamic_reconfigure_generate_messages_cpp.dir/clean
-depth_camera/ros_astra_camera/clean: depth_camera/ros_astra_camera/CMakeFiles/dynamic_reconfigure_generate_messages_eus.dir/clean
-depth_camera/ros_astra_camera/clean: depth_camera/ros_astra_camera/CMakeFiles/dynamic_reconfigure_generate_messages_lisp.dir/clean
-depth_camera/ros_astra_camera/clean: depth_camera/ros_astra_camera/CMakeFiles/dynamic_reconfigure_generate_messages_nodejs.dir/clean
-depth_camera/ros_astra_camera/clean: depth_camera/ros_astra_camera/CMakeFiles/dynamic_reconfigure_generate_messages_py.dir/clean
-depth_camera/ros_astra_camera/clean: depth_camera/ros_astra_camera/CMakeFiles/dynamic_reconfigure_gencfg.dir/clean
 depth_camera/ros_astra_camera/clean: depth_camera/ros_astra_camera/CMakeFiles/nodelet_generate_messages_cpp.dir/clean
 depth_camera/ros_astra_camera/clean: depth_camera/ros_astra_camera/CMakeFiles/nodelet_generate_messages_eus.dir/clean
 depth_camera/ros_astra_camera/clean: depth_camera/ros_astra_camera/CMakeFiles/nodelet_generate_messages_lisp.dir/clean
@@ -367,6 +364,26 @@ rikibot_follower/preinstall:
 # Recursive "clean" directory target.
 rikibot_follower/clean: rikibot_follower/CMakeFiles/rikibot_follower_node.dir/clean
 .PHONY : rikibot_follower/clean
+
+#=============================================================================
+# Directory level rules for directory rikibot_object_detect
+
+# Recursive "all" directory target.
+rikibot_object_detect/all:
+.PHONY : rikibot_object_detect/all
+
+# Recursive "preinstall" directory target.
+rikibot_object_detect/preinstall:
+.PHONY : rikibot_object_detect/preinstall
+
+# Recursive "clean" directory target.
+rikibot_object_detect/clean: rikibot_object_detect/CMakeFiles/dynamic_reconfigure_generate_messages_cpp.dir/clean
+rikibot_object_detect/clean: rikibot_object_detect/CMakeFiles/dynamic_reconfigure_generate_messages_eus.dir/clean
+rikibot_object_detect/clean: rikibot_object_detect/CMakeFiles/dynamic_reconfigure_generate_messages_lisp.dir/clean
+rikibot_object_detect/clean: rikibot_object_detect/CMakeFiles/dynamic_reconfigure_generate_messages_nodejs.dir/clean
+rikibot_object_detect/clean: rikibot_object_detect/CMakeFiles/dynamic_reconfigure_generate_messages_py.dir/clean
+rikibot_object_detect/clean: rikibot_object_detect/CMakeFiles/dynamic_reconfigure_gencfg.dir/clean
+.PHONY : rikibot_object_detect/clean
 
 #=============================================================================
 # Directory level rules for directory rikibot_yolov8/rikibot_yolov8
@@ -1938,6 +1955,162 @@ riki_msgs/CMakeFiles/riki_msgs_genpy.dir/clean:
 .PHONY : riki_msgs/CMakeFiles/riki_msgs_genpy.dir/clean
 
 #=============================================================================
+# Target rules for target rikibot_object_detect/CMakeFiles/dynamic_reconfigure_generate_messages_cpp.dir
+
+# All Build rule for target.
+rikibot_object_detect/CMakeFiles/dynamic_reconfigure_generate_messages_cpp.dir/all:
+	$(MAKE) $(MAKESILENT) -f rikibot_object_detect/CMakeFiles/dynamic_reconfigure_generate_messages_cpp.dir/build.make rikibot_object_detect/CMakeFiles/dynamic_reconfigure_generate_messages_cpp.dir/depend
+	$(MAKE) $(MAKESILENT) -f rikibot_object_detect/CMakeFiles/dynamic_reconfigure_generate_messages_cpp.dir/build.make rikibot_object_detect/CMakeFiles/dynamic_reconfigure_generate_messages_cpp.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/rikibot/robotCourseDesign2024/build/CMakeFiles --progress-num= "Built target dynamic_reconfigure_generate_messages_cpp"
+.PHONY : rikibot_object_detect/CMakeFiles/dynamic_reconfigure_generate_messages_cpp.dir/all
+
+# Build rule for subdir invocation for target.
+rikibot_object_detect/CMakeFiles/dynamic_reconfigure_generate_messages_cpp.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/rikibot/robotCourseDesign2024/build/CMakeFiles 0
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 rikibot_object_detect/CMakeFiles/dynamic_reconfigure_generate_messages_cpp.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/rikibot/robotCourseDesign2024/build/CMakeFiles 0
+.PHONY : rikibot_object_detect/CMakeFiles/dynamic_reconfigure_generate_messages_cpp.dir/rule
+
+# Convenience name for target.
+dynamic_reconfigure_generate_messages_cpp: rikibot_object_detect/CMakeFiles/dynamic_reconfigure_generate_messages_cpp.dir/rule
+.PHONY : dynamic_reconfigure_generate_messages_cpp
+
+# clean rule for target.
+rikibot_object_detect/CMakeFiles/dynamic_reconfigure_generate_messages_cpp.dir/clean:
+	$(MAKE) $(MAKESILENT) -f rikibot_object_detect/CMakeFiles/dynamic_reconfigure_generate_messages_cpp.dir/build.make rikibot_object_detect/CMakeFiles/dynamic_reconfigure_generate_messages_cpp.dir/clean
+.PHONY : rikibot_object_detect/CMakeFiles/dynamic_reconfigure_generate_messages_cpp.dir/clean
+
+#=============================================================================
+# Target rules for target rikibot_object_detect/CMakeFiles/dynamic_reconfigure_generate_messages_eus.dir
+
+# All Build rule for target.
+rikibot_object_detect/CMakeFiles/dynamic_reconfigure_generate_messages_eus.dir/all:
+	$(MAKE) $(MAKESILENT) -f rikibot_object_detect/CMakeFiles/dynamic_reconfigure_generate_messages_eus.dir/build.make rikibot_object_detect/CMakeFiles/dynamic_reconfigure_generate_messages_eus.dir/depend
+	$(MAKE) $(MAKESILENT) -f rikibot_object_detect/CMakeFiles/dynamic_reconfigure_generate_messages_eus.dir/build.make rikibot_object_detect/CMakeFiles/dynamic_reconfigure_generate_messages_eus.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/rikibot/robotCourseDesign2024/build/CMakeFiles --progress-num= "Built target dynamic_reconfigure_generate_messages_eus"
+.PHONY : rikibot_object_detect/CMakeFiles/dynamic_reconfigure_generate_messages_eus.dir/all
+
+# Build rule for subdir invocation for target.
+rikibot_object_detect/CMakeFiles/dynamic_reconfigure_generate_messages_eus.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/rikibot/robotCourseDesign2024/build/CMakeFiles 0
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 rikibot_object_detect/CMakeFiles/dynamic_reconfigure_generate_messages_eus.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/rikibot/robotCourseDesign2024/build/CMakeFiles 0
+.PHONY : rikibot_object_detect/CMakeFiles/dynamic_reconfigure_generate_messages_eus.dir/rule
+
+# Convenience name for target.
+dynamic_reconfigure_generate_messages_eus: rikibot_object_detect/CMakeFiles/dynamic_reconfigure_generate_messages_eus.dir/rule
+.PHONY : dynamic_reconfigure_generate_messages_eus
+
+# clean rule for target.
+rikibot_object_detect/CMakeFiles/dynamic_reconfigure_generate_messages_eus.dir/clean:
+	$(MAKE) $(MAKESILENT) -f rikibot_object_detect/CMakeFiles/dynamic_reconfigure_generate_messages_eus.dir/build.make rikibot_object_detect/CMakeFiles/dynamic_reconfigure_generate_messages_eus.dir/clean
+.PHONY : rikibot_object_detect/CMakeFiles/dynamic_reconfigure_generate_messages_eus.dir/clean
+
+#=============================================================================
+# Target rules for target rikibot_object_detect/CMakeFiles/dynamic_reconfigure_generate_messages_lisp.dir
+
+# All Build rule for target.
+rikibot_object_detect/CMakeFiles/dynamic_reconfigure_generate_messages_lisp.dir/all:
+	$(MAKE) $(MAKESILENT) -f rikibot_object_detect/CMakeFiles/dynamic_reconfigure_generate_messages_lisp.dir/build.make rikibot_object_detect/CMakeFiles/dynamic_reconfigure_generate_messages_lisp.dir/depend
+	$(MAKE) $(MAKESILENT) -f rikibot_object_detect/CMakeFiles/dynamic_reconfigure_generate_messages_lisp.dir/build.make rikibot_object_detect/CMakeFiles/dynamic_reconfigure_generate_messages_lisp.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/rikibot/robotCourseDesign2024/build/CMakeFiles --progress-num= "Built target dynamic_reconfigure_generate_messages_lisp"
+.PHONY : rikibot_object_detect/CMakeFiles/dynamic_reconfigure_generate_messages_lisp.dir/all
+
+# Build rule for subdir invocation for target.
+rikibot_object_detect/CMakeFiles/dynamic_reconfigure_generate_messages_lisp.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/rikibot/robotCourseDesign2024/build/CMakeFiles 0
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 rikibot_object_detect/CMakeFiles/dynamic_reconfigure_generate_messages_lisp.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/rikibot/robotCourseDesign2024/build/CMakeFiles 0
+.PHONY : rikibot_object_detect/CMakeFiles/dynamic_reconfigure_generate_messages_lisp.dir/rule
+
+# Convenience name for target.
+dynamic_reconfigure_generate_messages_lisp: rikibot_object_detect/CMakeFiles/dynamic_reconfigure_generate_messages_lisp.dir/rule
+.PHONY : dynamic_reconfigure_generate_messages_lisp
+
+# clean rule for target.
+rikibot_object_detect/CMakeFiles/dynamic_reconfigure_generate_messages_lisp.dir/clean:
+	$(MAKE) $(MAKESILENT) -f rikibot_object_detect/CMakeFiles/dynamic_reconfigure_generate_messages_lisp.dir/build.make rikibot_object_detect/CMakeFiles/dynamic_reconfigure_generate_messages_lisp.dir/clean
+.PHONY : rikibot_object_detect/CMakeFiles/dynamic_reconfigure_generate_messages_lisp.dir/clean
+
+#=============================================================================
+# Target rules for target rikibot_object_detect/CMakeFiles/dynamic_reconfigure_generate_messages_nodejs.dir
+
+# All Build rule for target.
+rikibot_object_detect/CMakeFiles/dynamic_reconfigure_generate_messages_nodejs.dir/all:
+	$(MAKE) $(MAKESILENT) -f rikibot_object_detect/CMakeFiles/dynamic_reconfigure_generate_messages_nodejs.dir/build.make rikibot_object_detect/CMakeFiles/dynamic_reconfigure_generate_messages_nodejs.dir/depend
+	$(MAKE) $(MAKESILENT) -f rikibot_object_detect/CMakeFiles/dynamic_reconfigure_generate_messages_nodejs.dir/build.make rikibot_object_detect/CMakeFiles/dynamic_reconfigure_generate_messages_nodejs.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/rikibot/robotCourseDesign2024/build/CMakeFiles --progress-num= "Built target dynamic_reconfigure_generate_messages_nodejs"
+.PHONY : rikibot_object_detect/CMakeFiles/dynamic_reconfigure_generate_messages_nodejs.dir/all
+
+# Build rule for subdir invocation for target.
+rikibot_object_detect/CMakeFiles/dynamic_reconfigure_generate_messages_nodejs.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/rikibot/robotCourseDesign2024/build/CMakeFiles 0
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 rikibot_object_detect/CMakeFiles/dynamic_reconfigure_generate_messages_nodejs.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/rikibot/robotCourseDesign2024/build/CMakeFiles 0
+.PHONY : rikibot_object_detect/CMakeFiles/dynamic_reconfigure_generate_messages_nodejs.dir/rule
+
+# Convenience name for target.
+dynamic_reconfigure_generate_messages_nodejs: rikibot_object_detect/CMakeFiles/dynamic_reconfigure_generate_messages_nodejs.dir/rule
+.PHONY : dynamic_reconfigure_generate_messages_nodejs
+
+# clean rule for target.
+rikibot_object_detect/CMakeFiles/dynamic_reconfigure_generate_messages_nodejs.dir/clean:
+	$(MAKE) $(MAKESILENT) -f rikibot_object_detect/CMakeFiles/dynamic_reconfigure_generate_messages_nodejs.dir/build.make rikibot_object_detect/CMakeFiles/dynamic_reconfigure_generate_messages_nodejs.dir/clean
+.PHONY : rikibot_object_detect/CMakeFiles/dynamic_reconfigure_generate_messages_nodejs.dir/clean
+
+#=============================================================================
+# Target rules for target rikibot_object_detect/CMakeFiles/dynamic_reconfigure_generate_messages_py.dir
+
+# All Build rule for target.
+rikibot_object_detect/CMakeFiles/dynamic_reconfigure_generate_messages_py.dir/all:
+	$(MAKE) $(MAKESILENT) -f rikibot_object_detect/CMakeFiles/dynamic_reconfigure_generate_messages_py.dir/build.make rikibot_object_detect/CMakeFiles/dynamic_reconfigure_generate_messages_py.dir/depend
+	$(MAKE) $(MAKESILENT) -f rikibot_object_detect/CMakeFiles/dynamic_reconfigure_generate_messages_py.dir/build.make rikibot_object_detect/CMakeFiles/dynamic_reconfigure_generate_messages_py.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/rikibot/robotCourseDesign2024/build/CMakeFiles --progress-num= "Built target dynamic_reconfigure_generate_messages_py"
+.PHONY : rikibot_object_detect/CMakeFiles/dynamic_reconfigure_generate_messages_py.dir/all
+
+# Build rule for subdir invocation for target.
+rikibot_object_detect/CMakeFiles/dynamic_reconfigure_generate_messages_py.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/rikibot/robotCourseDesign2024/build/CMakeFiles 0
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 rikibot_object_detect/CMakeFiles/dynamic_reconfigure_generate_messages_py.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/rikibot/robotCourseDesign2024/build/CMakeFiles 0
+.PHONY : rikibot_object_detect/CMakeFiles/dynamic_reconfigure_generate_messages_py.dir/rule
+
+# Convenience name for target.
+dynamic_reconfigure_generate_messages_py: rikibot_object_detect/CMakeFiles/dynamic_reconfigure_generate_messages_py.dir/rule
+.PHONY : dynamic_reconfigure_generate_messages_py
+
+# clean rule for target.
+rikibot_object_detect/CMakeFiles/dynamic_reconfigure_generate_messages_py.dir/clean:
+	$(MAKE) $(MAKESILENT) -f rikibot_object_detect/CMakeFiles/dynamic_reconfigure_generate_messages_py.dir/build.make rikibot_object_detect/CMakeFiles/dynamic_reconfigure_generate_messages_py.dir/clean
+.PHONY : rikibot_object_detect/CMakeFiles/dynamic_reconfigure_generate_messages_py.dir/clean
+
+#=============================================================================
+# Target rules for target rikibot_object_detect/CMakeFiles/dynamic_reconfigure_gencfg.dir
+
+# All Build rule for target.
+rikibot_object_detect/CMakeFiles/dynamic_reconfigure_gencfg.dir/all:
+	$(MAKE) $(MAKESILENT) -f rikibot_object_detect/CMakeFiles/dynamic_reconfigure_gencfg.dir/build.make rikibot_object_detect/CMakeFiles/dynamic_reconfigure_gencfg.dir/depend
+	$(MAKE) $(MAKESILENT) -f rikibot_object_detect/CMakeFiles/dynamic_reconfigure_gencfg.dir/build.make rikibot_object_detect/CMakeFiles/dynamic_reconfigure_gencfg.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/rikibot/robotCourseDesign2024/build/CMakeFiles --progress-num= "Built target dynamic_reconfigure_gencfg"
+.PHONY : rikibot_object_detect/CMakeFiles/dynamic_reconfigure_gencfg.dir/all
+
+# Build rule for subdir invocation for target.
+rikibot_object_detect/CMakeFiles/dynamic_reconfigure_gencfg.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/rikibot/robotCourseDesign2024/build/CMakeFiles 0
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 rikibot_object_detect/CMakeFiles/dynamic_reconfigure_gencfg.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/rikibot/robotCourseDesign2024/build/CMakeFiles 0
+.PHONY : rikibot_object_detect/CMakeFiles/dynamic_reconfigure_gencfg.dir/rule
+
+# Convenience name for target.
+dynamic_reconfigure_gencfg: rikibot_object_detect/CMakeFiles/dynamic_reconfigure_gencfg.dir/rule
+.PHONY : dynamic_reconfigure_gencfg
+
+# clean rule for target.
+rikibot_object_detect/CMakeFiles/dynamic_reconfigure_gencfg.dir/clean:
+	$(MAKE) $(MAKESILENT) -f rikibot_object_detect/CMakeFiles/dynamic_reconfigure_gencfg.dir/build.make rikibot_object_detect/CMakeFiles/dynamic_reconfigure_gencfg.dir/clean
+.PHONY : rikibot_object_detect/CMakeFiles/dynamic_reconfigure_gencfg.dir/clean
+
+#=============================================================================
 # Target rules for target depth_camera/ros_astra_camera/CMakeFiles/sensor_msgs_generate_messages_cpp.dir
 
 # All Build rule for target.
@@ -2326,162 +2499,6 @@ rosgraph_msgs_generate_messages_py: depth_camera/ros_astra_camera/CMakeFiles/ros
 depth_camera/ros_astra_camera/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/clean:
 	$(MAKE) $(MAKESILENT) -f depth_camera/ros_astra_camera/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/build.make depth_camera/ros_astra_camera/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/clean
 .PHONY : depth_camera/ros_astra_camera/CMakeFiles/rosgraph_msgs_generate_messages_py.dir/clean
-
-#=============================================================================
-# Target rules for target depth_camera/ros_astra_camera/CMakeFiles/dynamic_reconfigure_generate_messages_cpp.dir
-
-# All Build rule for target.
-depth_camera/ros_astra_camera/CMakeFiles/dynamic_reconfigure_generate_messages_cpp.dir/all:
-	$(MAKE) $(MAKESILENT) -f depth_camera/ros_astra_camera/CMakeFiles/dynamic_reconfigure_generate_messages_cpp.dir/build.make depth_camera/ros_astra_camera/CMakeFiles/dynamic_reconfigure_generate_messages_cpp.dir/depend
-	$(MAKE) $(MAKESILENT) -f depth_camera/ros_astra_camera/CMakeFiles/dynamic_reconfigure_generate_messages_cpp.dir/build.make depth_camera/ros_astra_camera/CMakeFiles/dynamic_reconfigure_generate_messages_cpp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/rikibot/robotCourseDesign2024/build/CMakeFiles --progress-num= "Built target dynamic_reconfigure_generate_messages_cpp"
-.PHONY : depth_camera/ros_astra_camera/CMakeFiles/dynamic_reconfigure_generate_messages_cpp.dir/all
-
-# Build rule for subdir invocation for target.
-depth_camera/ros_astra_camera/CMakeFiles/dynamic_reconfigure_generate_messages_cpp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/rikibot/robotCourseDesign2024/build/CMakeFiles 0
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 depth_camera/ros_astra_camera/CMakeFiles/dynamic_reconfigure_generate_messages_cpp.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/rikibot/robotCourseDesign2024/build/CMakeFiles 0
-.PHONY : depth_camera/ros_astra_camera/CMakeFiles/dynamic_reconfigure_generate_messages_cpp.dir/rule
-
-# Convenience name for target.
-dynamic_reconfigure_generate_messages_cpp: depth_camera/ros_astra_camera/CMakeFiles/dynamic_reconfigure_generate_messages_cpp.dir/rule
-.PHONY : dynamic_reconfigure_generate_messages_cpp
-
-# clean rule for target.
-depth_camera/ros_astra_camera/CMakeFiles/dynamic_reconfigure_generate_messages_cpp.dir/clean:
-	$(MAKE) $(MAKESILENT) -f depth_camera/ros_astra_camera/CMakeFiles/dynamic_reconfigure_generate_messages_cpp.dir/build.make depth_camera/ros_astra_camera/CMakeFiles/dynamic_reconfigure_generate_messages_cpp.dir/clean
-.PHONY : depth_camera/ros_astra_camera/CMakeFiles/dynamic_reconfigure_generate_messages_cpp.dir/clean
-
-#=============================================================================
-# Target rules for target depth_camera/ros_astra_camera/CMakeFiles/dynamic_reconfigure_generate_messages_eus.dir
-
-# All Build rule for target.
-depth_camera/ros_astra_camera/CMakeFiles/dynamic_reconfigure_generate_messages_eus.dir/all:
-	$(MAKE) $(MAKESILENT) -f depth_camera/ros_astra_camera/CMakeFiles/dynamic_reconfigure_generate_messages_eus.dir/build.make depth_camera/ros_astra_camera/CMakeFiles/dynamic_reconfigure_generate_messages_eus.dir/depend
-	$(MAKE) $(MAKESILENT) -f depth_camera/ros_astra_camera/CMakeFiles/dynamic_reconfigure_generate_messages_eus.dir/build.make depth_camera/ros_astra_camera/CMakeFiles/dynamic_reconfigure_generate_messages_eus.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/rikibot/robotCourseDesign2024/build/CMakeFiles --progress-num= "Built target dynamic_reconfigure_generate_messages_eus"
-.PHONY : depth_camera/ros_astra_camera/CMakeFiles/dynamic_reconfigure_generate_messages_eus.dir/all
-
-# Build rule for subdir invocation for target.
-depth_camera/ros_astra_camera/CMakeFiles/dynamic_reconfigure_generate_messages_eus.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/rikibot/robotCourseDesign2024/build/CMakeFiles 0
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 depth_camera/ros_astra_camera/CMakeFiles/dynamic_reconfigure_generate_messages_eus.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/rikibot/robotCourseDesign2024/build/CMakeFiles 0
-.PHONY : depth_camera/ros_astra_camera/CMakeFiles/dynamic_reconfigure_generate_messages_eus.dir/rule
-
-# Convenience name for target.
-dynamic_reconfigure_generate_messages_eus: depth_camera/ros_astra_camera/CMakeFiles/dynamic_reconfigure_generate_messages_eus.dir/rule
-.PHONY : dynamic_reconfigure_generate_messages_eus
-
-# clean rule for target.
-depth_camera/ros_astra_camera/CMakeFiles/dynamic_reconfigure_generate_messages_eus.dir/clean:
-	$(MAKE) $(MAKESILENT) -f depth_camera/ros_astra_camera/CMakeFiles/dynamic_reconfigure_generate_messages_eus.dir/build.make depth_camera/ros_astra_camera/CMakeFiles/dynamic_reconfigure_generate_messages_eus.dir/clean
-.PHONY : depth_camera/ros_astra_camera/CMakeFiles/dynamic_reconfigure_generate_messages_eus.dir/clean
-
-#=============================================================================
-# Target rules for target depth_camera/ros_astra_camera/CMakeFiles/dynamic_reconfigure_generate_messages_lisp.dir
-
-# All Build rule for target.
-depth_camera/ros_astra_camera/CMakeFiles/dynamic_reconfigure_generate_messages_lisp.dir/all:
-	$(MAKE) $(MAKESILENT) -f depth_camera/ros_astra_camera/CMakeFiles/dynamic_reconfigure_generate_messages_lisp.dir/build.make depth_camera/ros_astra_camera/CMakeFiles/dynamic_reconfigure_generate_messages_lisp.dir/depend
-	$(MAKE) $(MAKESILENT) -f depth_camera/ros_astra_camera/CMakeFiles/dynamic_reconfigure_generate_messages_lisp.dir/build.make depth_camera/ros_astra_camera/CMakeFiles/dynamic_reconfigure_generate_messages_lisp.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/rikibot/robotCourseDesign2024/build/CMakeFiles --progress-num= "Built target dynamic_reconfigure_generate_messages_lisp"
-.PHONY : depth_camera/ros_astra_camera/CMakeFiles/dynamic_reconfigure_generate_messages_lisp.dir/all
-
-# Build rule for subdir invocation for target.
-depth_camera/ros_astra_camera/CMakeFiles/dynamic_reconfigure_generate_messages_lisp.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/rikibot/robotCourseDesign2024/build/CMakeFiles 0
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 depth_camera/ros_astra_camera/CMakeFiles/dynamic_reconfigure_generate_messages_lisp.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/rikibot/robotCourseDesign2024/build/CMakeFiles 0
-.PHONY : depth_camera/ros_astra_camera/CMakeFiles/dynamic_reconfigure_generate_messages_lisp.dir/rule
-
-# Convenience name for target.
-dynamic_reconfigure_generate_messages_lisp: depth_camera/ros_astra_camera/CMakeFiles/dynamic_reconfigure_generate_messages_lisp.dir/rule
-.PHONY : dynamic_reconfigure_generate_messages_lisp
-
-# clean rule for target.
-depth_camera/ros_astra_camera/CMakeFiles/dynamic_reconfigure_generate_messages_lisp.dir/clean:
-	$(MAKE) $(MAKESILENT) -f depth_camera/ros_astra_camera/CMakeFiles/dynamic_reconfigure_generate_messages_lisp.dir/build.make depth_camera/ros_astra_camera/CMakeFiles/dynamic_reconfigure_generate_messages_lisp.dir/clean
-.PHONY : depth_camera/ros_astra_camera/CMakeFiles/dynamic_reconfigure_generate_messages_lisp.dir/clean
-
-#=============================================================================
-# Target rules for target depth_camera/ros_astra_camera/CMakeFiles/dynamic_reconfigure_generate_messages_nodejs.dir
-
-# All Build rule for target.
-depth_camera/ros_astra_camera/CMakeFiles/dynamic_reconfigure_generate_messages_nodejs.dir/all:
-	$(MAKE) $(MAKESILENT) -f depth_camera/ros_astra_camera/CMakeFiles/dynamic_reconfigure_generate_messages_nodejs.dir/build.make depth_camera/ros_astra_camera/CMakeFiles/dynamic_reconfigure_generate_messages_nodejs.dir/depend
-	$(MAKE) $(MAKESILENT) -f depth_camera/ros_astra_camera/CMakeFiles/dynamic_reconfigure_generate_messages_nodejs.dir/build.make depth_camera/ros_astra_camera/CMakeFiles/dynamic_reconfigure_generate_messages_nodejs.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/rikibot/robotCourseDesign2024/build/CMakeFiles --progress-num= "Built target dynamic_reconfigure_generate_messages_nodejs"
-.PHONY : depth_camera/ros_astra_camera/CMakeFiles/dynamic_reconfigure_generate_messages_nodejs.dir/all
-
-# Build rule for subdir invocation for target.
-depth_camera/ros_astra_camera/CMakeFiles/dynamic_reconfigure_generate_messages_nodejs.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/rikibot/robotCourseDesign2024/build/CMakeFiles 0
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 depth_camera/ros_astra_camera/CMakeFiles/dynamic_reconfigure_generate_messages_nodejs.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/rikibot/robotCourseDesign2024/build/CMakeFiles 0
-.PHONY : depth_camera/ros_astra_camera/CMakeFiles/dynamic_reconfigure_generate_messages_nodejs.dir/rule
-
-# Convenience name for target.
-dynamic_reconfigure_generate_messages_nodejs: depth_camera/ros_astra_camera/CMakeFiles/dynamic_reconfigure_generate_messages_nodejs.dir/rule
-.PHONY : dynamic_reconfigure_generate_messages_nodejs
-
-# clean rule for target.
-depth_camera/ros_astra_camera/CMakeFiles/dynamic_reconfigure_generate_messages_nodejs.dir/clean:
-	$(MAKE) $(MAKESILENT) -f depth_camera/ros_astra_camera/CMakeFiles/dynamic_reconfigure_generate_messages_nodejs.dir/build.make depth_camera/ros_astra_camera/CMakeFiles/dynamic_reconfigure_generate_messages_nodejs.dir/clean
-.PHONY : depth_camera/ros_astra_camera/CMakeFiles/dynamic_reconfigure_generate_messages_nodejs.dir/clean
-
-#=============================================================================
-# Target rules for target depth_camera/ros_astra_camera/CMakeFiles/dynamic_reconfigure_generate_messages_py.dir
-
-# All Build rule for target.
-depth_camera/ros_astra_camera/CMakeFiles/dynamic_reconfigure_generate_messages_py.dir/all:
-	$(MAKE) $(MAKESILENT) -f depth_camera/ros_astra_camera/CMakeFiles/dynamic_reconfigure_generate_messages_py.dir/build.make depth_camera/ros_astra_camera/CMakeFiles/dynamic_reconfigure_generate_messages_py.dir/depend
-	$(MAKE) $(MAKESILENT) -f depth_camera/ros_astra_camera/CMakeFiles/dynamic_reconfigure_generate_messages_py.dir/build.make depth_camera/ros_astra_camera/CMakeFiles/dynamic_reconfigure_generate_messages_py.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/rikibot/robotCourseDesign2024/build/CMakeFiles --progress-num= "Built target dynamic_reconfigure_generate_messages_py"
-.PHONY : depth_camera/ros_astra_camera/CMakeFiles/dynamic_reconfigure_generate_messages_py.dir/all
-
-# Build rule for subdir invocation for target.
-depth_camera/ros_astra_camera/CMakeFiles/dynamic_reconfigure_generate_messages_py.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/rikibot/robotCourseDesign2024/build/CMakeFiles 0
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 depth_camera/ros_astra_camera/CMakeFiles/dynamic_reconfigure_generate_messages_py.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/rikibot/robotCourseDesign2024/build/CMakeFiles 0
-.PHONY : depth_camera/ros_astra_camera/CMakeFiles/dynamic_reconfigure_generate_messages_py.dir/rule
-
-# Convenience name for target.
-dynamic_reconfigure_generate_messages_py: depth_camera/ros_astra_camera/CMakeFiles/dynamic_reconfigure_generate_messages_py.dir/rule
-.PHONY : dynamic_reconfigure_generate_messages_py
-
-# clean rule for target.
-depth_camera/ros_astra_camera/CMakeFiles/dynamic_reconfigure_generate_messages_py.dir/clean:
-	$(MAKE) $(MAKESILENT) -f depth_camera/ros_astra_camera/CMakeFiles/dynamic_reconfigure_generate_messages_py.dir/build.make depth_camera/ros_astra_camera/CMakeFiles/dynamic_reconfigure_generate_messages_py.dir/clean
-.PHONY : depth_camera/ros_astra_camera/CMakeFiles/dynamic_reconfigure_generate_messages_py.dir/clean
-
-#=============================================================================
-# Target rules for target depth_camera/ros_astra_camera/CMakeFiles/dynamic_reconfigure_gencfg.dir
-
-# All Build rule for target.
-depth_camera/ros_astra_camera/CMakeFiles/dynamic_reconfigure_gencfg.dir/all:
-	$(MAKE) $(MAKESILENT) -f depth_camera/ros_astra_camera/CMakeFiles/dynamic_reconfigure_gencfg.dir/build.make depth_camera/ros_astra_camera/CMakeFiles/dynamic_reconfigure_gencfg.dir/depend
-	$(MAKE) $(MAKESILENT) -f depth_camera/ros_astra_camera/CMakeFiles/dynamic_reconfigure_gencfg.dir/build.make depth_camera/ros_astra_camera/CMakeFiles/dynamic_reconfigure_gencfg.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/rikibot/robotCourseDesign2024/build/CMakeFiles --progress-num= "Built target dynamic_reconfigure_gencfg"
-.PHONY : depth_camera/ros_astra_camera/CMakeFiles/dynamic_reconfigure_gencfg.dir/all
-
-# Build rule for subdir invocation for target.
-depth_camera/ros_astra_camera/CMakeFiles/dynamic_reconfigure_gencfg.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/rikibot/robotCourseDesign2024/build/CMakeFiles 0
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 depth_camera/ros_astra_camera/CMakeFiles/dynamic_reconfigure_gencfg.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/rikibot/robotCourseDesign2024/build/CMakeFiles 0
-.PHONY : depth_camera/ros_astra_camera/CMakeFiles/dynamic_reconfigure_gencfg.dir/rule
-
-# Convenience name for target.
-dynamic_reconfigure_gencfg: depth_camera/ros_astra_camera/CMakeFiles/dynamic_reconfigure_gencfg.dir/rule
-.PHONY : dynamic_reconfigure_gencfg
-
-# clean rule for target.
-depth_camera/ros_astra_camera/CMakeFiles/dynamic_reconfigure_gencfg.dir/clean:
-	$(MAKE) $(MAKESILENT) -f depth_camera/ros_astra_camera/CMakeFiles/dynamic_reconfigure_gencfg.dir/build.make depth_camera/ros_astra_camera/CMakeFiles/dynamic_reconfigure_gencfg.dir/clean
-.PHONY : depth_camera/ros_astra_camera/CMakeFiles/dynamic_reconfigure_gencfg.dir/clean
 
 #=============================================================================
 # Target rules for target depth_camera/ros_astra_camera/CMakeFiles/nodelet_generate_messages_cpp.dir

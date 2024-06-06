@@ -575,6 +575,15 @@ rikibot_follower_IS_TOP_LEVEL:STATIC=OFF
 rikibot_follower_SOURCE_DIR:STATIC=/home/rikibot/robotCourseDesign2024/src/rikibot_follower
 
 //Value Computed by CMake
+rikibot_object_detect_BINARY_DIR:STATIC=/home/rikibot/robotCourseDesign2024/build/rikibot_object_detect
+
+//Value Computed by CMake
+rikibot_object_detect_IS_TOP_LEVEL:STATIC=OFF
+
+//Value Computed by CMake
+rikibot_object_detect_SOURCE_DIR:STATIC=/home/rikibot/robotCourseDesign2024/src/rikibot_object_detect
+
+//Value Computed by CMake
 rikibot_yolov5_BINARY_DIR:STATIC=/home/rikibot/robotCourseDesign2024/build/rikibot_yolov5/rikibot_yolov5
 
 //Value Computed by CMake
@@ -812,7 +821,7 @@ CMAKE_MODULE_LINKER_FLAGS_RELWITHDEBINFO-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_NM
 CMAKE_NM-ADVANCED:INTERNAL=1
 //number of local generators
-CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=11
+CMAKE_NUMBER_OF_MAKEFILES:INTERNAL=12
 //ADVANCED property for variable: CMAKE_OBJCOPY
 CMAKE_OBJCOPY-ADVANCED:INTERNAL=1
 //ADVANCED property for variable: CMAKE_OBJDUMP

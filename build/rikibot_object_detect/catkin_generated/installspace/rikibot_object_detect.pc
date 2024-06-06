@@ -1,0 +1,8 @@
+prefix=/home/rikibot/robotCourseDesign2024/install
+
+Name: rikibot_object_detect
+Description: Description of rikibot_object_detect
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 
