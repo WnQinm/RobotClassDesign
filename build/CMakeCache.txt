@@ -466,6 +466,15 @@ rikibot_yolov5_IS_TOP_LEVEL:STATIC=OFF
 //Value Computed by CMake
 rikibot_yolov5_SOURCE_DIR:STATIC=/home/rikibot/robotCourseDesign2024/src/rikibot_yolov5/rikibot_yolov5
 
+//Value Computed by CMake
+rikibot_yolov8_BINARY_DIR:STATIC=/home/rikibot/robotCourseDesign2024/build/rikibot_yolov8/rikibot_yolov8
+
+//Value Computed by CMake
+rikibot_yolov8_IS_TOP_LEVEL:STATIC=OFF
+
+//Value Computed by CMake
+rikibot_yolov8_SOURCE_DIR:STATIC=/home/rikibot/robotCourseDesign2024/src/rikibot_yolov8/rikibot_yolov8
+
 //The directory containing a CMake configuration file for rosconsole.
 rosconsole_DIR:PATH=/opt/ros/melodic/share/rosconsole/cmake
 
@@ -525,6 +534,15 @@ yolov5_ros_msgs_IS_TOP_LEVEL:STATIC=OFF
 
 //Value Computed by CMake
 yolov5_ros_msgs_SOURCE_DIR:STATIC=/home/rikibot/robotCourseDesign2024/src/rikibot_yolov5/yolov5_ros_msgs
+
+//Value Computed by CMake
+yolov8_ros_msgs_BINARY_DIR:STATIC=/home/rikibot/robotCourseDesign2024/build/rikibot_yolov8/yolov8_ros_msgs
+
+//Value Computed by CMake
+yolov8_ros_msgs_IS_TOP_LEVEL:STATIC=OFF
+
+//Value Computed by CMake
+yolov8_ros_msgs_SOURCE_DIR:STATIC=/home/rikibot/robotCourseDesign2024/src/rikibot_yolov8/yolov8_ros_msgs
 
 
 ########################

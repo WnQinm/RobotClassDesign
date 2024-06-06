@@ -6,6 +6,6 @@
 # testing this directory and lists subdirectories to be tested as well.
 subdirs("gtest")
 subdirs("riki_msgs")
-subdirs("rikibot_yolov5/rikibot_yolov5")
+subdirs("rikibot_yolov8/rikibot_yolov8")
 subdirs("rikibot")
-subdirs("rikibot_yolov5/yolov5_ros_msgs")
+subdirs("rikibot_yolov8/yolov8_ros_msgs")

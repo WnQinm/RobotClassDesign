@@ -24,6 +24,8 @@ a53d9dde0832ffc0d8c4b444b61df729 /home/rikibot/robotCourseDesign2024/devel/inclu
 a721a5f88c1bd28f9000f2df978f4c06 /home/rikibot/robotCourseDesign2024/devel/include/riki_msgs/ps2_value.h
 d063a2d7db5d94d6f6efddc6deeaa2f1 /home/rikibot/robotCourseDesign2024/devel/include/yolov5_ros_msgs/BoundingBox.h
 771f4e785091765ea16f0acee95af832 /home/rikibot/robotCourseDesign2024/devel/include/yolov5_ros_msgs/BoundingBoxes.h
+d836eef1d1bfacb0f8b96b42fc86f6ad /home/rikibot/robotCourseDesign2024/devel/include/yolov8_ros_msgs/BoundingBox.h
+c62d10300f3ad99343d54c66f82238dc /home/rikibot/robotCourseDesign2024/devel/include/yolov8_ros_msgs/BoundingBoxes.h
 5059ef4e822b5a19bbae4d911f318364 /home/rikibot/robotCourseDesign2024/devel/lib/python2.7/dist-packages/riki_msgs/msg/_Arm.py
 87983d6da9c4b78394ca09e8176861e3 /home/rikibot/robotCourseDesign2024/devel/lib/python2.7/dist-packages/riki_msgs/msg/_Battery.py
 24b2b3821373422103ce4dcf0393eae9 /home/rikibot/robotCourseDesign2024/devel/lib/python2.7/dist-packages/riki_msgs/msg/_Blue_connect.py
@@ -52,6 +54,9 @@ d732179432a618d3177f181f636f60cc /home/rikibot/robotCourseDesign2024/devel/lib/p
 13d0879d97c2bb2be2f7329dee9546e4 /home/rikibot/robotCourseDesign2024/devel/lib/python2.7/dist-packages/yolov5_ros_msgs/msg/_BoundingBox.py
 dd307c36e70a017137df311970fd67ba /home/rikibot/robotCourseDesign2024/devel/lib/python2.7/dist-packages/yolov5_ros_msgs/msg/_BoundingBoxes.py
 c62b8071b15de1cd63837ade191f2b11 /home/rikibot/robotCourseDesign2024/devel/lib/python2.7/dist-packages/yolov5_ros_msgs/msg/__init__.py
+acd5c8b7749e64cb06f64046456e6952 /home/rikibot/robotCourseDesign2024/devel/lib/python2.7/dist-packages/yolov8_ros_msgs/msg/_BoundingBox.py
+e2c759d31bd25d51376fcd7a726eb5f9 /home/rikibot/robotCourseDesign2024/devel/lib/python2.7/dist-packages/yolov8_ros_msgs/msg/_BoundingBoxes.py
+5ea9fb2ef3aa7e3094300ae77775ec0a /home/rikibot/robotCourseDesign2024/devel/lib/python2.7/dist-packages/yolov8_ros_msgs/msg/__init__.py
 ae3059e62487a67d3346e68b365e668e /home/rikibot/robotCourseDesign2024/devel/share/common-lisp/ros/riki_msgs/msg/Arm.lisp
 74a04451aab3dbd183303f0d4eb54336 /home/rikibot/robotCourseDesign2024/devel/share/common-lisp/ros/riki_msgs/msg/Battery.lisp
 544a0bcce17955d681ddb5d9621b4733 /home/rikibot/robotCourseDesign2024/devel/share/common-lisp/ros/riki_msgs/msg/Blue_connect.lisp
@@ -77,6 +82,8 @@ aec795af82983b0483595a7459774d8b /home/rikibot/robotCourseDesign2024/devel/share
 6e8e7108df4f933b1a218a1900d4559f /home/rikibot/robotCourseDesign2024/devel/share/common-lisp/ros/riki_msgs/srv/Trajectory.lisp
 8cdc6f5f321a15b8ac41c037f562ca05 /home/rikibot/robotCourseDesign2024/devel/share/common-lisp/ros/yolov5_ros_msgs/msg/BoundingBox.lisp
 153c32356b4aced27a9bd8bc5ae6a2d3 /home/rikibot/robotCourseDesign2024/devel/share/common-lisp/ros/yolov5_ros_msgs/msg/BoundingBoxes.lisp
+2da45b73ddb2b2f028c95fe9d67acdfa /home/rikibot/robotCourseDesign2024/devel/share/common-lisp/ros/yolov8_ros_msgs/msg/BoundingBox.lisp
+975074c717b1f871b86a26693e67ca94 /home/rikibot/robotCourseDesign2024/devel/share/common-lisp/ros/yolov8_ros_msgs/msg/BoundingBoxes.lisp
 aa92765df3acebb197e18f63944cb703 /home/rikibot/robotCourseDesign2024/devel/share/gennodejs/ros/riki_msgs/msg/Arm.js
 68c4ed49396c78bd9dc50ded5ca459a8 /home/rikibot/robotCourseDesign2024/devel/share/gennodejs/ros/riki_msgs/msg/Battery.js
 8a429e76b1020cf7fe5fbdd59088e10a /home/rikibot/robotCourseDesign2024/devel/share/gennodejs/ros/riki_msgs/msg/Blue_connect.js
@@ -102,6 +109,8 @@ f2a16a44ec0632cfd306ceb2ab9e3a01 /home/rikibot/robotCourseDesign2024/devel/share
 5351abc1620a9b82400d987427df1fef /home/rikibot/robotCourseDesign2024/devel/share/gennodejs/ros/riki_msgs/srv/Trajectory.js
 c13760691e238550e393456edba8c3b6 /home/rikibot/robotCourseDesign2024/devel/share/gennodejs/ros/yolov5_ros_msgs/msg/BoundingBox.js
 eee7139163997758e1f7cecd532009af /home/rikibot/robotCourseDesign2024/devel/share/gennodejs/ros/yolov5_ros_msgs/msg/BoundingBoxes.js
+4c20640ef703665714752981b863168b /home/rikibot/robotCourseDesign2024/devel/share/gennodejs/ros/yolov8_ros_msgs/msg/BoundingBox.js
+9a8df9f7a1100ab26642473858653bc4 /home/rikibot/robotCourseDesign2024/devel/share/gennodejs/ros/yolov8_ros_msgs/msg/BoundingBoxes.js
 71d577bbce2d9fbae27adbba5890a030 /home/rikibot/robotCourseDesign2024/devel/share/roseus/ros/riki_msgs/manifest.l
 c2900c48936eaa352aef5e8a4ba51d09 /home/rikibot/robotCourseDesign2024/devel/share/roseus/ros/riki_msgs/msg/Arm.l
 9d2b8bed7e07eaeab04cb58714ccf2eb /home/rikibot/robotCourseDesign2024/devel/share/roseus/ros/riki_msgs/msg/Battery.l
@@ -129,6 +138,9 @@ c4e05b8d95119f7af88866b4de6dfa87 /home/rikibot/robotCourseDesign2024/devel/share
 d6dff9d40749ab16162ef3ee9f78dc6c /home/rikibot/robotCourseDesign2024/devel/share/roseus/ros/yolov5_ros_msgs/manifest.l
 3f024881df2fa724d7909aeaf54ed823 /home/rikibot/robotCourseDesign2024/devel/share/roseus/ros/yolov5_ros_msgs/msg/BoundingBox.l
 b2bc105a919a723c1612a6f971f1697d /home/rikibot/robotCourseDesign2024/devel/share/roseus/ros/yolov5_ros_msgs/msg/BoundingBoxes.l
+f2811d7401d65870a2b0f9f0fe7f3a31 /home/rikibot/robotCourseDesign2024/devel/share/roseus/ros/yolov8_ros_msgs/manifest.l
+41dcaac224a2bad84139f6ee5c464864 /home/rikibot/robotCourseDesign2024/devel/share/roseus/ros/yolov8_ros_msgs/msg/BoundingBox.l
+cae6fe918a6302d635ce00ff5732a53d /home/rikibot/robotCourseDesign2024/devel/share/roseus/ros/yolov8_ros_msgs/msg/BoundingBoxes.l
 b5d1572baa1fbef97aaf80b41172c5bc CMakeFiles/clean_test_results
 65ae43be15d61ad220a5fbb79af2b749 riki_msgs/CMakeFiles/_riki_msgs_generate_messages_check_deps_Arm
 2d1b43079bd2525e1d9f9a82a00f9247 riki_msgs/CMakeFiles/_riki_msgs_generate_messages_check_deps_Battery
@@ -158,10 +170,9 @@ d37e8bf39c1ad276631b53abda4246cd riki_msgs/CMakeFiles/riki_msgs_generate_message
 d37e8bf39c1ad276631b53abda4246cd riki_msgs/CMakeFiles/riki_msgs_generate_messages_lisp
 d37e8bf39c1ad276631b53abda4246cd riki_msgs/CMakeFiles/riki_msgs_generate_messages_nodejs
 d37e8bf39c1ad276631b53abda4246cd riki_msgs/CMakeFiles/riki_msgs_generate_messages_py
-5082ee78cec1ebd4f2829eb2c077fc9d rikibot_yolov5/yolov5_ros_msgs/CMakeFiles/_yolov5_ros_msgs_generate_messages_check_deps_BoundingBox
-736235173184bb9bc46ec023b6f8c6d3 rikibot_yolov5/yolov5_ros_msgs/CMakeFiles/_yolov5_ros_msgs_generate_messages_check_deps_BoundingBoxes
-973c86276fb5007d67c31bea3be1ad2d rikibot_yolov5/yolov5_ros_msgs/CMakeFiles/yolov5_ros_msgs_generate_messages_cpp
-973c86276fb5007d67c31bea3be1ad2d rikibot_yolov5/yolov5_ros_msgs/CMakeFiles/yolov5_ros_msgs_generate_messages_eus
-973c86276fb5007d67c31bea3be1ad2d rikibot_yolov5/yolov5_ros_msgs/CMakeFiles/yolov5_ros_msgs_generate_messages_lisp
-973c86276fb5007d67c31bea3be1ad2d rikibot_yolov5/yolov5_ros_msgs/CMakeFiles/yolov5_ros_msgs_generate_messages_nodejs
-973c86276fb5007d67c31bea3be1ad2d rikibot_yolov5/yolov5_ros_msgs/CMakeFiles/yolov5_ros_msgs_generate_messages_py
+c3934e07776ec9e0bf973641b3a071a8 rikibot_yolov8/yolov8_ros_msgs/CMakeFiles/_yolov8_ros_msgs_generate_messages_check_deps_BoundingBox
+d49b73b89df01aaa16f8f50b705df4a2 rikibot_yolov8/yolov8_ros_msgs/CMakeFiles/yolov8_ros_msgs_generate_messages_cpp
+d49b73b89df01aaa16f8f50b705df4a2 rikibot_yolov8/yolov8_ros_msgs/CMakeFiles/yolov8_ros_msgs_generate_messages_eus
+d49b73b89df01aaa16f8f50b705df4a2 rikibot_yolov8/yolov8_ros_msgs/CMakeFiles/yolov8_ros_msgs_generate_messages_lisp
+d49b73b89df01aaa16f8f50b705df4a2 rikibot_yolov8/yolov8_ros_msgs/CMakeFiles/yolov8_ros_msgs_generate_messages_nodejs
+d49b73b89df01aaa16f8f50b705df4a2 rikibot_yolov8/yolov8_ros_msgs/CMakeFiles/yolov8_ros_msgs_generate_messages_py

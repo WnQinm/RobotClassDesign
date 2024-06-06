@@ -1,4 +1,4 @@
 *.out
 *.swp
 tags
-src/rikibot_yolov5/rikibot_yolov5/weights/*
+src/rikibot_yolov8/rikibot_yolov8/weights/*

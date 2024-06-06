@@ -1,0 +1,8 @@
+prefix=/home/rikibot/robotCourseDesign2024/devel
+
+Name: rikibot_yolov8
+Description: Description of rikibot_yolov8
+Version: 1.1.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

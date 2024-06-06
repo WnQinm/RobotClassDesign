@@ -1,0 +1,8 @@
+prefix=/home/rikibot/robotCourseDesign2024/devel
+
+Name: yolov8_ros_msgs
+Description: Description of yolov8_ros_msgs
+Version: 2.1.0
+Cflags: -I/home/rikibot/robotCourseDesign2024/devel/include
+Libs: -L${prefix}/lib 
+Requires: 
