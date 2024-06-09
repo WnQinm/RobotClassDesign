@@ -1,0 +1,5 @@
+<launch>
+    <include file="$(find rikibot)/launch/bringup.launch"/>
+    <include file="$(find rikibot)/launch/navigate.launch"/>
+    <node name="rviz" pkg="rviz" type="rviz" args="-d $(find rikibot)/rviz/navigate.rviz" required="true" />
+</launch>

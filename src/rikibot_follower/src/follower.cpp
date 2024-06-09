@@ -6,6 +6,7 @@
 #include <depth_image_proc/depth_traits.h>
 #include <image_transport/image_transport.h>
 #include <string.h>
+#include <iostream>
 
 class RikibotFollower {
 
@@ -32,7 +33,7 @@ public:
                    min_x_(-0.2), max_x_(0.2),
                    max_z_(0.8), goal_z_(0.6),
                    z_scale_(1.0), x_scale_(5.0),it(nh)
-  { 
+  {
     ros::NodeHandle private_nh("~");
 
     private_nh.getParam("min_y", min_y_);
@@ -113,6 +114,8 @@ public:
        }
      }
     }
+
+    std::cout<<"depth:"<<z<<std::endl;
 
     if (n>4000){
       x /= n;

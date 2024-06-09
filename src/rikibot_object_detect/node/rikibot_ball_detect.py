@@ -26,8 +26,8 @@ class RikibotBallDetect():
         self.cv_image = None
 
         # green, blue, red 轮询
-        self.ballLower = np.array([[ 45, 100,  30], [135,  79,  63], [  0, 162, 167]])
-        self.ballUpper = np.array([[ 65, 256, 256], [179, 255, 255], [179, 255, 255]])
+        self.ballLower = np.array([[ 32,  45, 137], [100,  33,  62], [  0, 134, 146]])
+        self.ballUpper = np.array([[ 75, 255, 255], [152, 187, 189], [ 17, 255, 255]])
 
         #green ball
         #self.ballLower = np.array((45, 100, 30))
@@ -62,6 +62,7 @@ class RikibotBallDetect():
                 hsv = cv2.cvtColor(blurred, cv2.COLOR_BGR2HSV)
                 erode_hsv = cv2.erode(hsv, None, iterations=2)
 
+                cs = []
                 for i in range(3):
                     mask = cv2.inRange(erode_hsv, self.ballLower[i], self.ballUpper[i])
                     #kernel = np.ones((5, 5), np.uint8)
@@ -73,25 +74,28 @@ class RikibotBallDetect():
                         # it to compute the minimum enclosing circle and
                         # centroid
                         c = max(cnts, key=cv2.contourArea)
-                        rect = cv2.minAreaRect(c)
-                        box = cv2.boxPoints(rect)
-                        cv2.drawContours(self.cv_image, [np.int0(box)], -1, (0, 255, 255), 2)
-                        cx, cy = rect[0]
-                        h, w = rect[1]
-                        self.c_angle = rect[2]
+                        cs.append(c)
 
-                        # only proceed if the radius meets a minimum size
-                        if h*w > 2000:
-                            # draw the circle and centroid on the frame,
-                            # then update the list of tracked points
-                            cv2.circle(self.cv_image, (int(cx), int(cy)), 3, (216, 0, 255), -1)
-                            bbox = BoundingBox2D()
-                            bbox.center.x = cx
-                            bbox.center.y = cy
-                            bbox.size_x = w
-                            bbox.size_y = h
-                            self.pub_bbox.publish(bbox)
-                        break
+                if len(cs)>0:
+                    c = max(cs, key=cv2.contourArea)
+                    rect = cv2.minAreaRect(c)
+                    box = cv2.boxPoints(rect)
+                    cv2.drawContours(self.cv_image, [np.int0(box)], -1, (0, 255, 255), 2)
+                    cx, cy = rect[0]
+                    h, w = rect[1]
+                    self.c_angle = rect[2]
+
+                    # only proceed if the radius meets a minimum size
+                    if h*w > 2000:
+                        # draw the circle and centroid on the frame,
+                        # then update the list of tracked points
+                        cv2.circle(self.cv_image, (int(cx), int(cy)), 3, (216, 0, 255), -1)
+                        bbox = BoundingBox2D()
+                        bbox.center.x = cx
+                        bbox.center.y = cy
+                        bbox.size_x = w
+                        bbox.size_y = h
+                        self.pub_bbox.publish(bbox)
 
                 if self.pub_face_type == "compressed":
                     # publishes traffic sign image in compressed type

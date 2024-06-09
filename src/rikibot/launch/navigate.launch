@@ -4,7 +4,7 @@
   <include file="$(find rikibot)/launch/lidar/$(env RIKILIDAR).launch" />
   <include file="$(find rikibot)/launch/move_base.launch" />
 
-  <arg name="map_file" default="$(find rikibot)/maps/house.yaml"/>
+  <arg name="map_file" default="$(find rikibot)/maps/dormitory.yaml"/>
   <node pkg="map_server" name="map_server"  type="map_server" args="$(arg map_file)" />
 
   <!-- AMCL -->

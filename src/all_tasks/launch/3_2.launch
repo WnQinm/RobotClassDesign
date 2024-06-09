@@ -1,0 +1,9 @@
+<launch>
+    <include file="$(find rikibot)/launch/bringup.launch"/>
+    <include file="$(find rikibot)/launch/navigate.launch" />
+    <node name="rviz" pkg="rviz" type="rviz" args="-d $(find rikibot)/rviz/navigate.rviz" required="true" />
+    
+    <node pkg="rikibot" type="rikibot_patrol_nav.py" name="rikibot_patrol_nav_node" output="screen" >
+    </node>
+
+  </launch>

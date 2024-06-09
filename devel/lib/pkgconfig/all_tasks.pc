@@ -1,0 +1,8 @@
+prefix=/home/rikibot/robotCourseDesign2024/devel
+
+Name: all_tasks
+Description: Description of all_tasks
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

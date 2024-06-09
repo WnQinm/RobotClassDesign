@@ -1,0 +1,4 @@
+<launch>
+    <include file="$(find rikibot)/launch/camera.launch"/>
+    <include file="$(find rikibot_object_detect)/launch/rikibot_ball_object.launch"/>
+</launch>

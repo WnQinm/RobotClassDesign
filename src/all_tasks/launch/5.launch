@@ -1,0 +1,4 @@
+<launch>
+    <include file="$(find rikibot)/launch/bringup.launch"/>
+    <include file="$(find rikibot_follower)/launch/follower.launch"/>
+</launch>
