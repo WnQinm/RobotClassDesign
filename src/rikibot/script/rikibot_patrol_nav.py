@@ -13,7 +13,7 @@ class PatrolNav():
         rospy.on_shutdown(self.shutdown)
 
         #set navigation target pose
-        location = [[9.186, 0.560, 0.000], [0.000, 0.000, 0.999, -0.043]]
+        location = [[-3.769, -0.269, 0.000], [0.000, 0.000, -0.018, 1.000]]
 
         # Goal state return values
         goal_states = ['PENDING', 'ACTIVE', 'PREEMPTED', 'SUCCEEDED', 'ABORTED',
@@ -27,7 +27,7 @@ class PatrolNav():
         rospy.loginfo("Starting position navigation ")
         while not rospy.is_shutdown():
             # Get the next location in the current sequence
-            rospy.loginfo("Going to: " + f"Point:({",".join(location[0])}), Quaternion:({",".join(location[1])})")
+            # rospy.loginfo("Going to: " + f"Point:({",".join(location[0])}), Quaternion:({",".join(location[1])})")
 
             # Set up the next goal location
             goal = MoveBaseGoal()
